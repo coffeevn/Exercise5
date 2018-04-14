@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/add_tv_Name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="10dp"
+        android:layout_alignParentTop="true"
+        android:text="@string/name" />
+
+    <EditText
+        android:id="@+id/add_et_Name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/add_tv_Name"
+        android:layout_marginRight="10dp"
+        android:layout_below="@+id/add_tv_Name"
+        android:ems="10"
+        android:hint="@string/name" />
+
+    <TextView
+        android:id="@+id/add_tv_DueTo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/add_tv_Name"
+        android:layout_below="@+id/add_et_Name"
+        android:layout_marginTop="15dp"
+        android:text="@string/due_to" />
+
+    <DatePicker
+        android:id="@+id/add_dialog_datePicker"
+        style="@android:style/Widget.Holo.DatePicker"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/add_tv_Name"
+        android:layout_below="@+id/add_tv_DueTo"
+        android:layout_marginRight="10dp"
+        android:calendarViewShown="false" />
+
+    <TextView
+        android:id="@+id/add_tv_Priority"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/add_tv_Name"
+        android:layout_below="@+id/add_dialog_datePicker"
+        android:layout_marginTop="15dp"
+        android:text="@string/priority" />
+
+    <RadioGroup
+        android:id="@+id/add_rg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/add_tv_Name"
+        android:layout_below="@+id/add_tv_Priority"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp">
+        <RadioButton
+            android:id="@+id/add_rb_high"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/high" />
+
+        <RadioButton
+            android:id="@+id/add_rb_normal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/normal" />
+
+        <RadioButton
+            android:id="@+id/add_rb_low"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/low" />
+    </RadioGroup>
+
+
+    <TextView
+        android:id="@+id/add_tv_Save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/add_et_Name"
+        android:layout_below="@+id/add_rg"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/save"
+        android:textSize="20sp"/>
+
+    <TextView
+        android:id="@+id/add_tv_Cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/add_rg"
+        android:layout_toLeftOf="@id/add_tv_Save"
+        android:layout_marginTop="20dp"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="25dp"
+        android:text="@string/cancel"
+        android:textSize="20sp"/>
+
+</RelativeLayout>
